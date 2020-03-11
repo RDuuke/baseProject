@@ -22,6 +22,9 @@ AppFactory::setContainer($container);
 
 $app = AppFactory::create();
 
+if (!empty(getenv("BasePath"))) {
+    $app->setBasePath(getenv("BasePath"));
+}
 $views = require_once __DIR__ . "/views.php";
 $views($app);
 

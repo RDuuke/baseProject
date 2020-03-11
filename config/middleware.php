@@ -8,10 +8,10 @@ use Selective\BasePath\BasePathMiddleware;
 return function (App $app) {
     $settings = $app->getContainer()->get('settings');
 
+    $app->add(new BasePathMiddleware($app));
     $app->addErrorMiddleware(
         $settings['displayErrorDetails'],
         $settings['logErrorDetails'],
         $settings['logErrors']);
 
-    $app->add(new BasePathMiddleware($app));
 };

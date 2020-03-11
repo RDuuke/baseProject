@@ -25,7 +25,7 @@ $app = AppFactory::create();
 $views = require_once __DIR__ . "/views.php";
 $views($app);
 
-$middlewares = require_once dirname(__DIR__) . "/src/Middleware/middleware.php";
+$middlewares = require_once __DIR__ . "/middleware.php";
 $middlewares($app);
 
 $controllers = require_once __DIR__ . "/controllers.php";

@@ -1,0 +1,2 @@
+[2020-03-11T17:37:02.089059+01:00] slim-app.DEBUG: App\Controllers\HomeController {"message":"Ejecución de función Home"} {"uid":"c92ad3a"}
+[2020-03-11T17:50:58.739133+01:00] slim-app.DEBUG: App\Controllers\HomeController {"message":"Ejecución de función Home"} {"uid":"3a7d3f0"}

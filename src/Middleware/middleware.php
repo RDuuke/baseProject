@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Slim\App;
+use Selective\BasePath\BasePathMiddleware;
 
 return function (App $app) {
     $settings = $app->getContainer()->get('settings');
@@ -11,4 +12,6 @@ return function (App $app) {
         $settings['displayErrorDetails'],
         $settings['logErrorDetails'],
         $settings['logErrors']);
+
+    $app->add(new BasePathMiddleware($app));
 };

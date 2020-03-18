@@ -10,4 +10,7 @@ return function (App $app) {
     $app->get('/', 'HomeController:home')
     ->add($container->get('viewMiddleware'));
 
+    $app->get('/test', 'HomeController:testRoute')->setName('testName')
+        ->add($container->get('viewMiddleware'));
+
 };

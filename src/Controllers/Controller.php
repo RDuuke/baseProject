@@ -4,7 +4,7 @@ declare(strict_types = 1);
 namespace App\Controllers;
 
 use Psr\Container\ContainerInterface;
-use Psr\Http\Message\RequestInterface as Request;
+use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
 abstract class Controller

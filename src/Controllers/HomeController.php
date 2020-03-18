@@ -6,6 +6,7 @@ namespace App\Controllers;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Log\LoggerInterface;
+use Slim\Routing\RouteContext;
 
 class HomeController extends Controller
 {
@@ -17,7 +18,6 @@ class HomeController extends Controller
 
     public function testRoute(Request $request, Response $response) {
 
-        $response->getBody()->write("Url Test");
-        return $response;
+        return $response->withHeader('Location', $this->routeParser->urlFor('home'))->withStatus(200);
     }
 }

@@ -32,6 +32,10 @@ $controllers = require_once __DIR__ . "/controllers.php";
 $controllers($app);
 
 $routes = require_once dirname(__DIR__) . "/src/routes.php";
+
+$container->set("routeParser", function () use ($app) {
+   return $app->getRouteCollector()->getRouteParser();
+});
 $routes($app);
 
 $app->run();
